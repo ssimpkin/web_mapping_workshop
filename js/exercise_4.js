@@ -56,7 +56,7 @@ var clickHandler = function(){
       	info += '<h2>' + feature.properties.name + '</h2>';
       	if(feature.properites.cuisine) info += '<p>' + feature.properties.cuisine + '</p>';
       	if(feature.properites.phone) info += '<p>' + feature.properties.phone + '</p>';
-    	if(feature.properites.website) info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
+    	if(feature.properites.website){ info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
       	info += '</div>';
         $('#info').append(info);
     })
