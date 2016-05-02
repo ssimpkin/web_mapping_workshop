@@ -28,7 +28,7 @@ var featureLayer = L.mapbox.featureLayer();
 
 featureLayer.on('ready', function(){ // need to run through each feature and note their style
 	this.eachLayer(function(layer){
-      layer.setIcon(L.mapbox.marker.icon({}
+      layer.setIcon(L.mapbox.marker.icon({
       	"marker-color": "#8834bb",
         "marker-size": "large",
        	"marker-symbol": "restaurant"
