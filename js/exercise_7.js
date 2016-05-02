@@ -16,7 +16,7 @@ var clickHandler = function(e){
 
     $('#info').append(info);
   });
-};
+});
 
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
