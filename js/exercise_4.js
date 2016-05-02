@@ -81,7 +81,7 @@ map.on('click', function(){
 	$('#sidebar').fadeOut(200);
 })
 
-var myLocation = L.mapbox.featureLayrer().addTo(map);
+var myLocation = L.mapbox.featureLayer().addTo(map);
 
 map.on('locationfound', function(e){
 	myLocation.setGeoJSON({
