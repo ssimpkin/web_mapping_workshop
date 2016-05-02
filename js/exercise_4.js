@@ -116,7 +116,9 @@ function getDirections(frm, to){
           
        ],
       costing: 'pedestrian',
+      directions_options:{
       units: 'miles'
+      }
     }) 
     
     $.ajax({
