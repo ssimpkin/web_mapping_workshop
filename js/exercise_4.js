@@ -144,5 +144,17 @@ function getDirections(frm, to){
               
             }
       })
+      
+      $('#directions').fadeIn(400, function(){
+        var summary = data.trip.summary
+      	$('#summary').empty();
+        $('#distance').text(Math.round(summary.length * 100) / 100) + data.trip.units;
+        $('#time').text();
+      	
+      })
+      
+      
+      
+      
     })
 }
