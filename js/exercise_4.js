@@ -116,7 +116,7 @@ function getDirections(frm, to){
           
        ],
       costing: 'pedestrian',
-      directions_options:{
+      directions_options: {
       units: 'miles'
       }
     }) 
