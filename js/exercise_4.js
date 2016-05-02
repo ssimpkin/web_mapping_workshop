@@ -57,7 +57,7 @@ var clickHandler = function(){
       	if(feature.properites.cuisine) info += '<p>' + feature.properties.cuisine + '</p>';
       	if(feature.properites.phone) info += '<p>' + feature.properties.phone + '</p>';
     	if(feature.properites.website) info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
-      	info += </div>;
+      	info += '</div>';
         $('#info').append(info);
     })
 }
