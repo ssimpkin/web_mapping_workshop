@@ -38,3 +38,8 @@ featureLayer.on('ready', function(){ // need to run through each feature and not
     map.fitBounds(featureLayer.getBounds());
 })
 
+featureLayer.on('ready', function(){
+ this.eachLayer(function(layer){
+  layer.bindPopup('Welcome to ' + layer.feature.properties.name) 
+ })
+})
