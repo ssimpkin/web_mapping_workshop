@@ -47,31 +47,37 @@ featureLayer.on('ready', function(){ // need to run through each feature and not
 
 
 
-var clickHandler = function(){
-	$('#info').empty(); // use JQuery to grab a DOM item, we want all the info ones 
-  	
+var clickHandler = function(e){
+	$('#info').empty();
+  
   	var feature = e.target.feature;
   
-  	$('#sidebar').fadeIn(400), function(){
+  	$('#sidebar').fadeIn(400, function(){
     	var info = '';
       
-      	info += '<div>'
-      	info += '<h2>' + feature.properties.name + '</h2>';
-      	if(feature.properites.cuisine) info += '<p>' + feature.properties.cuisine + '</p>';
-      	if(feature.properites.phone) info += '<p>' + feature.properties.phone + '</p>';
-        if(feature.properites.website) info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
-    }
-      	info += '</div>'
-        $('#info').append(info);
+      	info += '<div>';
+      	info += '<h2>' + feature.properties.name + '</h2>'
+        if(feature.properties.cuisine){
+          info += '<p>' + feature.properties.cuisine + '</p>';
+        }
+        if(feature.properties.phone){
+          info += '<p>' + feature.properties.phone + '</p>';
+        }
+      	if(feature.properties.website){
+          info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
+        }
+      	info += '</div>';
+      	$('#info').append(info);
     })
 }
 
 featureLayer.on('ready', function(){
 	this.eachLayer(function(layer){
-     	layer.on('click', clickHandler);
+    	layer.on('click', clickHandler);
     })
 })
 
 map.on('click', function(){
- 	$('#sidebar').fadeOut(200); 
+	$('#sidebar').fadeOut(200);
 })
+
