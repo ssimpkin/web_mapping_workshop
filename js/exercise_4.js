@@ -120,7 +120,7 @@ function getDirections(frm, to){
     }) 
     
     $.ajax({
-      url: 'http://valhalla.mapzen.com/route',
+      url: 'https://valhalla.mapzen.com/route',
       data: {
         json: jsonPayload,
         api_key: 'valhalla-gwtf3x2'
@@ -130,7 +130,7 @@ function getDirections(frm, to){
       }
       
     }).done(function(date){
-      var routeShape = polyline.decode(data.trip.legs[0].)
+      var routeShape = polyline.decode(data.trip.legs[0].shape);
       routeLine.setGeoJSON({
       		type: 'Feature',
         	geometry: {
