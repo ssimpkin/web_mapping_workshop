@@ -44,20 +44,23 @@ featureLayer.on('ready', function(){ // need to run through each feature and not
 //  })
 // })
 
+
+
+
 var clickHandler = function(){
 	$('#info').empty(); // use JQuery to grab a DOM item, we want all the info ones 
   	
   	var feature = e.target.feature;
   
   	$('#sidebar').fadeIn(400), function(){
-    	var info = "";
+    	var info = '';
       
-      	info += '<div>';
+      	info += '<div>'
       	info += '<h2>' + feature.properties.name + '</h2>';
       	if(feature.properites.cuisine) info += '<p>' + feature.properties.cuisine + '</p>';
       	if(feature.properites.phone) info += '<p>' + feature.properties.phone + '</p>';
-    	if(feature.properites.website){ info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
-      	info += '</div>';
+    	if(feature.properites.website) info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
+      	info += '</div>'
         $('#info').append(info);
     })
 }
