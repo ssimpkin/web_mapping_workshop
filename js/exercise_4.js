@@ -67,3 +67,5 @@ featureLayer.on('ready', function(){
      	layer.on('click', clickHandler) 
     })
 })
+
+)
