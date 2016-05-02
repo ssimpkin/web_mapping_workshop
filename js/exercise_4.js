@@ -129,7 +129,7 @@ function getDirections(frm, to){
         
       }
       
-    }).done(function(date){
+    }).done(function(data){
       var routeShape = polyline.decode(data.trip.legs[0].shape);
       routeLine.setGeoJSON({
       		type: 'Feature',
